@@ -1,0 +1,155 @@
+{
+  "data": {
+    "board": [],
+    "message": [
+      {
+        "title": "dfdf",
+        "user": 1,
+        "createdAt": "2015-07-03T22:32:19.117Z",
+        "updatedAt": "2015-07-03T22:32:19.117Z",
+        "id": 1
+      },
+      {
+        "title": "dfd",
+        "user": 1,
+        "createdAt": "2015-07-03T22:32:20.691Z",
+        "updatedAt": "2015-07-03T22:32:20.691Z",
+        "id": 2
+      }
+    ],
+    "passport": [
+      {
+        "protocol": "local",
+        "password": "$2a$10$4rU8d4Smg0SW.7i6S1PZTu5XBCfogR9A5b6SwynnY3uHhYeA5LVEa",
+        "user": 1,
+        "createdAt": "2015-07-03T22:32:12.013Z",
+        "updatedAt": "2015-07-03T22:32:12.013Z",
+        "id": 1
+      }
+    ],
+    "user": [
+      {
+        "username": "troverman",
+        "email": "troverman@gmail.com",
+        "first_name": "Trevor",
+        "createdAt": "2015-07-03T22:32:11.749Z",
+        "updatedAt": "2015-07-03T22:32:11.749Z",
+        "id": 1
+      }
+    ]
+  },
+  "schema": {
+    "board": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "message": {
+      "title": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "passport": {
+      "protocol": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "provider": {
+        "type": "string"
+      },
+      "identifier": {
+        "type": "string"
+      },
+      "tokens": {
+        "type": "json"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "username": {
+        "type": "string",
+        "unique": true
+      },
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "first_name": {
+        "type": "string"
+      },
+      "message_count": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "board": {},
+    "message": {
+      "id": 2
+    },
+    "passport": {
+      "id": 1
+    },
+    "user": {
+      "id": 1
+    }
+  }
+}
