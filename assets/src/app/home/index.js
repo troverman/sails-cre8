@@ -13,6 +13,8 @@ angular.module( 'sailng.home', [
 	});
 })
 
-.controller( 'HomeCtrl', function HomeController( $scope, titleService ) {
-	titleService.setTitle('Home');
+.controller( 'HomeCtrl', function HomeController( $scope, titleService, config ) {
+	titleService.setTitle('conexus');
+	$scope.currentUser = config.currentUser;
+
 });
