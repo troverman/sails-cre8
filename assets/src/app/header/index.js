@@ -1,5 +1,4 @@
-angular.module( 'sailng.header', [
-])
+angular.module( 'sailng.header', ['ui.bootstrap'])
 
 .controller( 'HeaderCtrl', function HeaderController( $scope, $state, config ) {
     $scope.currentUser = config.currentUser;
