@@ -2,9 +2,8 @@
 
 
 <p ng-show="!currentUser"><a href="/register/">Register</a> to post a message!</p>
-<p ng-show="currentUser">welcome {{currentUser.email}}  -- {{currentUser.username}}</p>
+<!--<p ng-show="currentUser">welcome {{currentUser.email}}  -- {{currentUser.username}}</p>-->
 
 <div ng-if="currentUser">
-	<div class="btn-group">
-	welcome {{currentUser.email}} -- {{currentUser.username}}
+	<p class="lead">welcome {{currentUser.username}}!</p>
 </div>
