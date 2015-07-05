@@ -19,7 +19,7 @@ angular.module( 'sailng', [
     // $urlRouterProvider.otherwise( '/home' );
     $urlRouterProvider.otherwise(function ($injector, $location) {
         if ($location.$$url === '/') {
-            window.location = '/home';
+            //window.location = '/home';
         }
         else {
             // pass through to let the web server handle this request
