@@ -44,21 +44,21 @@ module.exports.routes = {
   'post /auth/local': 'AuthController.callback',
   'post /auth/local/:action': 'AuthController.callback',
 
-    /**
-     * User routes
-     */
-    'get /api/user': 'UserController.getAll',
-    'get /api/user/:id': 'UserController.getOne',
-    'post /api/user': 'UserController.create',
+  /**
+   * User routes
+   */
+  'get /api/user': 'UserController.getAll',
+  'get /api/user/:id': 'UserController.getOne',
+  'post /api/user': 'UserController.create',
 
   /**
-     * Message routes
-     *
-     */
-    'get /api/message': 'MessageController.getAll',
-    'get /api/message/:id': 'MessageController.getOne',
-    'post /api/message': 'MessageController.create',
-    'delete /api/message/:id': 'MessageController.destroy',
+   * Message routes
+   *
+   */
+  'get /api/message': 'MessageController.getAll',
+  'get /api/message/:id': 'MessageController.getOne',
+  'post /api/message': 'MessageController.create',
+  'delete /api/message/:id': 'MessageController.destroy',
 
   // If a request to a URL doesn't match any of the custom routes above, it is matched 
   // against Sails route blueprints.  See `config/blueprints.js` for configuration options
