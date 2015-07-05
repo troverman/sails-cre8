@@ -1,6 +1,5 @@
 angular.module( 'sailng', [
     'ui.router',
-    'ui.bootstrap',
     'sails.io',
     'angularMoment',
     'lodash',
