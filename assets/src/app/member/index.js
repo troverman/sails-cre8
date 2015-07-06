@@ -13,6 +13,6 @@ angular.module( 'sailng.member', [
 	});
 })
 
-.controller( 'MembertCtrl', function AboutController( $scope, titleService ) {
+.controller( 'MembertCtrl', function MemberController( $scope, titleService ) {
 	titleService.setTitle('member');
 });
