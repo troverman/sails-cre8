@@ -2,7 +2,7 @@ angular.module( 'sailng.member', [
 ])
 
 .config(function config( $stateProvider ) {
-	$stateProvider.state( 'about', {
+	$stateProvider.state( 'member', {
 		url: '/member',
 		views: {
 			"main": {
