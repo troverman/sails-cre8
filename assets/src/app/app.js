@@ -12,6 +12,7 @@ angular.module( 'sailng', [
     'sailng.header',
     'sailng.home',
     'sailng.about',
+    'sailng.member',
     'sailng.messages'
 ])
 
