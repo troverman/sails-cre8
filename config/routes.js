@@ -67,7 +67,7 @@ module.exports.routes = {
   'get /home': 'HomeController.index',
   'get /about': 'HomeController.index',
   'get /messages': 'HomeController.index',
-  'get /member': 'HomeController.index'
+  'get /member': 'HomeController.index',
   'get /member/:id': 'HomeController.index'
 
 
