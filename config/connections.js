@@ -20,9 +20,11 @@
  */
 module.exports.connections = {
 
-   localDiskDb: {
-    adapter: 'sails-disk'
-  },
+  productionMongoHqDb: {
+    adapter: 'sails-mongo',
+    url: 'mongodb://heroku_4029wpvm:gcd9u8qfd1nernnqr147m1bl1@ds035260.mongolab.com:35260/heroku_4029wpvm'
+    //url: process.env.MONGOLAB_URI
+  }
 
 };
 
