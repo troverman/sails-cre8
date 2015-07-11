@@ -49,7 +49,13 @@ module.exports.routes = {
    */
   'get /api/user': 'UserController.getAll',
   'get /api/user/:id': 'UserController.getOne',
+
+
+  //'get /api/user/:slug': 'UserController.profile',
+
+
   'post /api/user': 'UserController.create',
+
 
   /**
    * Message routes
@@ -67,8 +73,21 @@ module.exports.routes = {
   'get /home': 'HomeController.index',
   'get /about': 'HomeController.index',
   'get /messages': 'HomeController.index',
+
   'get /member': 'HomeController.index',
-  'get /member/:id': 'HomeController.index'
+  'get /member/:id': 'HomeController.index',
+
+  'get /member/:slug': 'HomeController.index'
+
+
+
+
+
+
+
+
+
+
 
 
 };
