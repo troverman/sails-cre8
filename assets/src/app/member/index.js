@@ -6,13 +6,13 @@ angular.module( 'sailng.member', [
 		url: '/member',
 		views: {
 			"main": {
-				controller: 'MembertCtrl',
+				controller: 'MemberCtrl',
 				templateUrl: 'member/index.tpl.html'
 			}
 		}
 	});
 })
 
-.controller( 'MembertCtrl', function MemberController( $scope, titleService ) {
+.controller( 'MemberCtrl', function MemberController( $scope, titleService ) {
 	titleService.setTitle('member');
 });
