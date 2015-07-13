@@ -17,7 +17,7 @@ angular.module( 'sailng', [
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
-    //$urlRouterProvider.otherwise(function ($injector, $location) {
+    $urlRouterProvider.otherwise(function ($injector, $location) {
         //if ($location.$$url === '/') {
             //window.location = '/home';
         //}
@@ -25,7 +25,7 @@ angular.module( 'sailng', [
             // pass through to let the web server handle this request
             window.location = $location.$$absUrl;
         //}
-    //});
+    });
     $routeProvider.when("/", {
         templateUrl: "/home/index.tpl.html",
         controller: "HomeCtrl"
