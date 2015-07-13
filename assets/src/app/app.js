@@ -23,7 +23,7 @@ angular.module( 'sailng', [
         //}
         //else {
             // pass through to let the web server handle this request
-            //window.location = $location.$$absUrl;
+            window.location = $location.$$absUrl;
         //}
     //});
     $routeProvider.when("/", {
