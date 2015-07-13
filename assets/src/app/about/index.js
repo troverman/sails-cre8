@@ -7,7 +7,7 @@ angular.module( 'sailng.about', [
 		views: {
 			"main": {
 				controller: 'AboutCtrl',
-				templateUrl: 'about/index.tpl.html'
+				templateUrl: '/about/index.tpl.html'
 			}
 		}
 	});

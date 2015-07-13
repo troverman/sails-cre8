@@ -7,7 +7,7 @@ angular.module( 'sailng.home', [
 		views: {
 			"main": {
 				controller: 'HomeCtrl',
-				templateUrl: 'home/index.tpl.html'
+				templateUrl: '/home/index.tpl.html'
 			}
 		}
 	});
