@@ -18,6 +18,7 @@ angular.module( 'sailng', [
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
     $urlRouterProvider.when('/about/', '/about');
+    $urlRouterProvider.when('/messages/', '/messages');
 
     $urlRouterProvider.otherwise(function ($injector, $location) {
         if ($location.$$url === '/') {
