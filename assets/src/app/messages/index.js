@@ -7,7 +7,7 @@ angular.module( 'sailng.messages', [
         views: {
             "main": {
                 controller: 'MessagesController',
-                templateUrl: '/messages/index.tpl.html'
+                templateUrl: 'messages/index.tpl.html'
             }
         },
         resolve: {

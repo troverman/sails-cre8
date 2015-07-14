@@ -7,7 +7,7 @@ angular.module( 'sailng.member', [
 		views: {
 			"main": {
 				controller: 'MemberCtrl',
-				templateUrl: '/member/index.tpl.html'
+				templateUrl: 'member/index.tpl.html'
 			}
 		}
 	});

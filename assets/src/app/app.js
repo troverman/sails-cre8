@@ -26,6 +26,8 @@ angular.module( 'sailng', [
             window.location = $location.$$absUrl;
         }
     });
+    //$urlRouterProvider.when('', '/inbox');
+
     /*$routeProvider.when("/", {
         templateUrl: "/home/index.tpl.html",
         controller: "HomeCtrl"
