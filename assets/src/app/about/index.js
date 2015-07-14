@@ -3,7 +3,7 @@ angular.module( 'sailng.about', [
 
 .config(function config( $stateProvider ) {
 	$stateProvider.state( 'about', {
-		url: '/about/',
+		url: '/about',
 		views: {
 			"main": {
 				controller: 'AboutCtrl',

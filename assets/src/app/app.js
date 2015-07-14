@@ -17,6 +17,8 @@ angular.module( 'sailng', [
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
+    $urlRouterProvider.when('/about/', '/about');
+
     $urlRouterProvider.otherwise(function ($injector, $location) {
         if ($location.$$url === '/') {
             window.location = '/';
@@ -26,7 +28,6 @@ angular.module( 'sailng', [
             window.location = $location.$$absUrl;
         }
     });
-    //$urlRouterProvider.when('', '/inbox');
 
     /*$routeProvider.when("/", {
         templateUrl: "/home/index.tpl.html",
