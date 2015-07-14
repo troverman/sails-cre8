@@ -3,12 +3,11 @@ angular.module( 'sailng.member', [
 
 .config(function config( $stateProvider ) {
 	$stateProvider.state( 'member', {
-		url: '/member/:memberID/:memberPage',
+		url: '/member/:memberID',
         controller: function($scope, $stateParams) {
             // get the id
             $scope.id = $stateParams.memberID;
-            $scope.location = $stateParams.memberPage; 
-              
+
         },
 		views: {
 			"main": {
