@@ -26,7 +26,7 @@ angular.module( 'sailng', [
             window.location = $location.$$absUrl;
         //}
     });
-    $routeProvider.when("/", {
+    /*$routeProvider.when("/", {
         templateUrl: "/home/index.tpl.html",
         controller: "HomeCtrl"
     }).when("/about", {
@@ -40,7 +40,7 @@ angular.module( 'sailng', [
         controller: "MemberCtrl"
     }).otherwise({
         redirectTo: "/"
-    });
+    });*/
     $locationProvider.html5Mode(true);
 
 
