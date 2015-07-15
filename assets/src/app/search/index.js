@@ -22,7 +22,7 @@ angular.module( 'sailng.search', [
 
 .controller( 'SearchController', function SearchController( $scope, $sailsSocket, lodash, config, titleService, MemberModel, members ) {
     titleService.setTitle('Search');
-    /*$scope.newMember = {};
+    $scope.newMember = {};
     $scope.members = members;
     $scope.currentUser = config.currentUser;
 
@@ -35,6 +35,6 @@ angular.module( 'sailng.search', [
                 lodash.remove($scope.members, {id: envelope.id});
                 break;
         }
-    });*/
+    });
 
 });
