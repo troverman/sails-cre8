@@ -9,20 +9,20 @@ angular.module( 'sailng.search', [
                 controller: 'SearchController',
                 templateUrl: 'search/index.tpl.html'
             }
-        },
+        }/*,
         resolve: {
             members: function(MemberModel) {
                 return MemberModel.getAll().then(function(models) {
                     return models;
                 });
             }
-        }
+        }*/
     });
 })
 
 .controller( 'SearchController', function SearchController( $scope, $sailsSocket, lodash, config, titleService, MemberModel, members ) {
     titleService.setTitle('Search');
-    $scope.newMember = {};
+    /*$scope.newMember = {};
     $scope.members = members;
     $scope.currentUser = config.currentUser;
 
@@ -35,6 +35,6 @@ angular.module( 'sailng.search', [
                 lodash.remove($scope.members, {id: envelope.id});
                 break;
         }
-    });
+    });*/
 
 });
