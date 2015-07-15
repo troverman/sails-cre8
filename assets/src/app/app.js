@@ -13,13 +13,17 @@ angular.module( 'sailng', [
     'sailng.home',
     'sailng.about',
     'sailng.member',
-    'sailng.messages'
+    'sailng.messages',
+    'sailng.search'
+
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
     $urlRouterProvider.when('/about/', '/about');
     $urlRouterProvider.when('/messages/', '/messages');
     $urlRouterProvider.when('/member/', '/member');
+    $urlRouterProvider.when('/search/', '/search');
+
 
     $urlRouterProvider.otherwise(function ($injector, $location) {
         if ($location.$$url === '/') {
