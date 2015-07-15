@@ -11,8 +11,8 @@ angular.module( 'sailng.search', [
             }
         },
         resolve: {
-            messages: function(MessageModel) {
-                return MessageModel.getAll().then(function(models) {
+            members: function(MemberModel) {
+                return MemberModel.getAll().then(function(models) {
                     return models;
                 });
             }
@@ -20,36 +20,21 @@ angular.module( 'sailng.search', [
     });
 })
 
-.controller( 'SearchController', function SearchsController( $scope, $sailsSocket, lodash, config, titleService, MessageModel, messages ) {
+.controller( 'SearchController', function SearchController( $scope, $sailsSocket, lodash, config, titleService, MemberModel, members ) {
     titleService.setTitle('Search');
-    $scope.newMessage = {};
-    $scope.messages = messages;
+    $scope.newMember = {};
+    $scope.members = members;
     $scope.currentUser = config.currentUser;
 
-    $sailsSocket.subscribe('message', function (envelope) {
+    $sailsSocket.subscribe('user', function (envelope) {
         switch(envelope.verb) {
             case 'created':
-                $scope.messages.unshift(envelope.data);
+                $scope.members.unshift(envelope.data);
                 break;
             case 'destroyed':
-                lodash.remove($scope.messages, {id: envelope.id});
+                lodash.remove($scope.members, {id: envelope.id});
                 break;
         }
     });
 
-    $scope.destroyMessage = function(message) {
-        // check here if this message belongs to the currentUser
-        if (message.user.id === config.currentUser.id) {
-            MessageModel.delete(message).then(function(model) {
-                // message has been deleted, and removed from $scope.messages
-            });
-        }
-    };
-
-    $scope.createMessage = function(newMessage) {
-        newMessage.user = config.currentUser.id;
-        MessageModel.create(newMessage).then(function(model) {
-            $scope.newMessage = {};
-        });
-    };
 });
