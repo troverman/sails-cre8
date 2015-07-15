@@ -2,15 +2,14 @@ angular.module('models.member', ['lodash', 'services', 'sails.io',])
 
 .service('MemberModel', function(lodash, utils, $sailsSocket) {
     this.getAll = function() {
+        var deferred = $q.defer();
         var url = utils.prepareUrl('user');
-        return $sailsSocket.get(url).then(success, error);
+
+        $sailsSocket.get(url, function(models) {
+            return deferred.resolve(models);
+        });
+
+        return deferred.promise;
     };
 
-    var success = function(response) {
-        return response.data;
-    };
-
-    var error = function(error) {
-        console.log(error);
-    };
 });
