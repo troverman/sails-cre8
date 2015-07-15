@@ -9,14 +9,14 @@ angular.module( 'sailng.search', [
                 controller: 'SearchController',
                 templateUrl: 'search/index.tpl.html'
             }
-        },
+        }/*,
         resolve: {
             members: function(MemberModel) {
                 return MemberModel.getAll().then(function(models) {
                     return models;
                 });
             }
-        }
+        }*/
     });
 })
 
