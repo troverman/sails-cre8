@@ -1,5 +1,10 @@
 module.exports = {
     index: function(req, res) {
-        res.view();
+
+    	var testItems = [
+            {whatup: 'hello!', mhm: 'awww-yis', soo: '1234'}
+        ];
+
+        res.view(testItems: testItems);
     }
 };
