@@ -7,6 +7,11 @@ module.exports = {
         ];
 
         /*res.view(testItems: testItems);*/
-        res.view();
+        res.view({
+            title: 'Home',
+            testItems: testItems,
+            currentUser: req.user
+        });
+        //res.view();
     }
 };
