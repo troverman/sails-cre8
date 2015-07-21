@@ -7,9 +7,9 @@ module.exports = {
         ];
 
         User.findAll().done(function(err, users) {
-            res.view({
-                members: users
-            });
+            //res.view({
+                //members: users
+            //});
         });
 
 
