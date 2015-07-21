@@ -6,13 +6,19 @@ module.exports = {
             {whatup: 'hello!', mhm: 'awww-yis', soo: '1234'}
         ];
 
-        User.findAll().done(function(err, users) {
+        //User.findAll().done(function(err, users) {
             //res.view({
                 //members: users
             //});
-        });
+        //});
 
-
+		User.getAll()
+		.spread(function(models) {
+			res.json(models);
+		})
+		.fail(function(err) {
+			// An error occured
+		});
 
 
         /*res.view(testItems: testItems);*/
