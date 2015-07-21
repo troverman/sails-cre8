@@ -6,11 +6,13 @@ module.exports = {
             {whatup: 'hello!', mhm: 'awww-yis', soo: '1234'}
         ];
 
-        User.findAll().done(function(err, applicants) {
+        User.getAll().done(function(err, applicants) {
             res.view({
                 members: members
             });
         });
+
+        
 
 
         /*res.view(testItems: testItems);*/
