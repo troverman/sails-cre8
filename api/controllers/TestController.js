@@ -6,9 +6,16 @@ module.exports = {
             {whatup: 'hello!', mhm: 'awww-yis', soo: '1234'}
         ];
 
-        /*res.view(testItems: testItems);*/
-        res.view({
-            testItems: testItems
+        User.findAll().done(function(err, applicants) {
+            res.view({
+                members: members
+            });
         });
+
+
+        /*res.view(testItems: testItems);*/
+        //res.view({
+            //testItems: testItems
+        //});
     }
 };
