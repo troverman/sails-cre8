@@ -14,7 +14,7 @@ module.exports = {
 
 		User.getAll()
 		.spread(function(models) {
-			res.view(members: models);
+			res.view({members: models});
 		})
 		.fail(function(err) {
 			// An error occured
