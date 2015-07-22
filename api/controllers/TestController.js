@@ -11,7 +11,10 @@ module.exports = {
 
             res.view({
                 //members: users,
-                testItems: req.testing(),
+                testItems: User.find().exec(function(err, users) {
+                    if (err) throw err;
+                    return users;
+                },
                 this_is_a_test: found
             });
 
@@ -36,18 +39,5 @@ module.exports = {
             })
            	.fail(function(err) {});
         });*/
-    },
-
-    testing: function(req, res) {
-
-
-        User.find().exec(function(err, users) {
-            if (err) throw err;
-            return users;
-        });
-
-        return User;
-
-
     }
 };
