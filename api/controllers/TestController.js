@@ -12,7 +12,7 @@ module.exports = {
             //});
         //});
 
-		User.findAll()
+		User.getAll()
 		.done(function(err, models) {
 			res.view({
 				members: models
