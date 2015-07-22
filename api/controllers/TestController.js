@@ -24,7 +24,7 @@ module.exports = {
             //testItems: testItems
         //});
 
-		var test = User.getAll();
-		var test1 = User.findAll();
+		//var test = User.getAll();
+		//var test1 = User.findAll();
     }
 };
