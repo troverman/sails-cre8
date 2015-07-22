@@ -7,7 +7,7 @@ module.exports = {
         ];
 
 
-        User.getAll().then(function(err, users) {
+        User.getAll().exec(function(err, users) {
 
         	//if (err) throw err;
 
