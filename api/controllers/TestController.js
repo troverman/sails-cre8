@@ -56,6 +56,16 @@ module.exports = {
         .fail(function(err) {
             // res.send(404);
         });
+    },
+
+    getByUrlTitle: function(req, res) {
+        Post.getByUrlTitle(req.param('url_title'))
+        .spread(function(model) {
+            res.json(model);
+        })
+        .fail(function(err) {
+            // res.send(404);
+        });
     }
 
 
