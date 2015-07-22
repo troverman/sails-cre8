@@ -32,6 +32,8 @@ module.exports = {
         }
     },
 
+    destroy: function() {},
+
     getAll: function() {
         return Post.find()
         .then(function (models) {
@@ -52,6 +54,9 @@ module.exports = {
             return [model];
         });
 
-    }
+    },
+
+    vote: function() {}
+
 };
 

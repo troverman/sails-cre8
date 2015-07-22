@@ -66,7 +66,7 @@ module.exports.routes = {
   'delete /api/message/:id': 'MessageController.destroy',
 
   'get /api/post': 'TestController.getAll',
-  'get /api/post/:id': 'TestController.getOne',
+  //'get /api/post/:id': 'TestController.getOne',
   'get /api/post/:url_title': 'TestController.getByUrlTitle',
 
 
