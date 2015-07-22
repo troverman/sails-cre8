@@ -83,11 +83,10 @@ module.exports.routes = {
   'get /home': 'HomeController.index',
   'get /about': 'HomeController.index',
   'get /messages': 'HomeController.index',
+  'get /post': 'HomeController.index',
   'get /search': 'HomeController.index',
-
   'get /member': 'HomeController.index',
   'get /member/:id': 'HomeController.index',
-
   'get /member/:slug': 'HomeController.index'
 
   // If a request to a URL doesn't match any of the custom routes above, it is matched 

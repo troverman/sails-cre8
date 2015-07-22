@@ -14,6 +14,8 @@ angular.module( 'sailng', [
     'sailng.about',
     'sailng.member',
     'sailng.messages',
+    'sailng.post',
+
     'sailng.search'
 
 ])
@@ -23,6 +25,7 @@ angular.module( 'sailng', [
     $urlRouterProvider.when('/messages/', '/messages');
     $urlRouterProvider.when('/member/', '/member');
     $urlRouterProvider.when('/search/', '/search');
+    $urlRouterProvider.when('/post/', '/post');
 
 
     $urlRouterProvider.otherwise(function ($injector, $location) {
@@ -51,12 +54,6 @@ angular.module( 'sailng', [
         redirectTo: "/"
     });*/
     $locationProvider.html5Mode(true);
-
-
-
-
-
-
 
 
 })
