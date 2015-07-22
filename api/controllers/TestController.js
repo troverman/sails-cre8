@@ -6,7 +6,17 @@ module.exports = {
             {whatup: 'hello!', mhm: 'awww-yis', soo: '1234'}
         ];
 
-        var test = User.getAll();
+
+        User.find().then(function(err, users) {
+
+        	if (err) throw err;
+
+            res.view({
+                members: users
+            });
+
+        });
+
 
         /*User.find().exec(function(err, users) {
 
