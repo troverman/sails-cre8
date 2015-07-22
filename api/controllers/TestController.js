@@ -6,22 +6,21 @@ module.exports = {
             {whatup: 'hello!', mhm: 'awww-yis', soo: '1234'}
         ];
 
-        /*User.find().exec(function(err, users) {
-
+        User.find().exec(function(err, users) {
         	if (err) throw err;
             res.view({
-                members: users
+                members: users,
+                testItems: testItems
             });
-
-        });*/
+        });
 
 		//same as above
-     	User.getAll().spread(function(models) {
+     	/*User.getAll().spread(function(models) {
             res.view({
                 members: models,
                 testItems: testItems
             })
            	.fail(function(err) {});
-        });
+        });*/
     }
 };
