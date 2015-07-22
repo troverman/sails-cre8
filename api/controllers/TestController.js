@@ -12,16 +12,19 @@ module.exports = {
             //});
         //});
 
-		User.getAll()
+		/*User.getAll()
 		.spread(function(err, models) {
 			res.view({
 				members: models
 			});
-		});
+		});*/
 
         /*res.view(testItems: testItems);*/
         //res.view({
             //testItems: testItems
         //});
+
+		var test = User.getAll();
+		var test1 = User.findAll();
     }
 };
