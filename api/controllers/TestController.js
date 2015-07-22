@@ -28,7 +28,7 @@ module.exports = {
 
         });*/
 
-        res.view({members:test});
+        //res.view({members:test});
 
 		//User.getAll()
 		//.exec(function(err, models) {
