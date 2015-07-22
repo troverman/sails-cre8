@@ -12,16 +12,12 @@ module.exports = {
             //});
         //});
 
-		User.getAll()
+		User.findAll()
 		.done(function(err, models) {
 			res.view({
 				members: models
 			});
-		})
-		.fail(function(err) {
-			// An error occured
 		});
-
 
         /*res.view(testItems: testItems);*/
         //res.view({
