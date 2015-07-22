@@ -10,7 +10,7 @@ module.exports = {
 	},
 
 	getOne: function(req, res) {
-		User.getOne(req.param('username'))
+		User.getOne(req.param('id'))
 		.spread(function(model) {
 			res.json(model);
 		})
