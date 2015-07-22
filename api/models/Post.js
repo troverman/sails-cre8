@@ -32,8 +32,6 @@ module.exports = {
         }
     },
 
-    destroy: function() {},
-
     getAll: function() {
         return Post.find()
         .then(function (models) {
@@ -49,14 +47,11 @@ module.exports = {
     },
 
     getByUrlTitle: function(a_url_title) {
-        return Post.find({url_title: a_url_title}).exec(function (err, found){})
-        .then(function (model) {
-            return [model];
-        });
-
-    },
-
-    vote: function() {}
-
+        //return Post.find({url_title: a_url_title}).exec(function (err, found){})
+        //.then(function (model) {
+            //return [model];
+        //}
+        //);
+    }
 };
 

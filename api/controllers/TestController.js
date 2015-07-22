@@ -6,7 +6,6 @@ module.exports = {
             {whatup: 'hello!', mhm: 'awww-yis', soo: '1234'}
         ];
 
-
         User.find({username:'troverman'}).exec(function (err, found){
 
             res.view('test/index', {
@@ -20,7 +19,6 @@ module.exports = {
 
         });
 
-
         //User.find().exec(function(err, users) {
         	//if (err) throw err;
             //res.view({
@@ -29,7 +27,6 @@ module.exports = {
                 //this_is_a_test: this_is_a_test,
             //});
         //});
-
 
 		//same as above
      	/*User.getAll().spread(function(models) {
@@ -40,7 +37,9 @@ module.exports = {
            	.fail(function(err) {});
         });*/
     },
-    
+
+    destroy: function() {},
+
     getAll: function(req, res) {
         Post.find().exec(function(err, users) {
             if (err) throw err;
@@ -59,14 +58,15 @@ module.exports = {
     },
 
     getByUrlTitle: function(req, res) {
-        Post.getByUrlTitle(req.param('url_title'))
-        .spread(function(model) {
-            res.json(model);
-        })
-        .fail(function(err) {
+        //Post.getByUrlTitle(req.param('url_title'))
+        //.spread(function(model) {
+            //res.json(model);
+        //})
+        //.fail(function(err) {
             // res.send(404);
-        });
-    }
+        //});
+    },
 
+    vote: function() {}
 
 };
