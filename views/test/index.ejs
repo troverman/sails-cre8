@@ -60,11 +60,9 @@
 </head>
 
 <body>
-    <h1><%= members %></h1>
-    <h1><%= testItems %></h1>
 
     <% testItems.forEach(function(testItem)  { %>
-        <li><%= testItem %></li>
+        <li><%= testItem.whatup %></li>
     <% }); %>
 
     <% members.forEach(function(member)  { %>
