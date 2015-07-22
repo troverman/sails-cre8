@@ -45,7 +45,7 @@ module.exports = {
         Post.find().exec(function(err, users) {
             if (err) throw err;
             res.json(users);
-    }
+    },
 
     getOne: function(req, res) {
         Post.getOne(req.param('id'))
@@ -55,7 +55,7 @@ module.exports = {
         .fail(function(err) {
             // res.send(404);
         });
-    },
+    }
 
 
 };
