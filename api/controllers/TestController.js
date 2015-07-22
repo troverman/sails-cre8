@@ -6,14 +6,14 @@ module.exports = {
             {whatup: 'hello!', mhm: 'awww-yis', soo: '1234'}
         ];
 
-        User.findAll().exec(function(err, users) {
+        User.find().exec(function(err, users) {
 
         	if (err) throw err;
 
             res.view({
                 members: users
             });
-            
+
         });
 
 		//User.getAll()
