@@ -8,18 +8,24 @@ module.exports = {
 
 
         this_is_a_test = User.find({username:'trevor'}).exec(function (err, found){
-            return found;
-        });
 
-
-        User.find().exec(function(err, users) {
-        	if (err) throw err;
             res.view({
-                members: users,
-                testItems: testItems,
-                this_is_a_test: this_is_a_test,
+                //members: users,
+                //testItems: testItems,
+                this_is_a_test: found
             });
+
         });
+
+
+        //User.find().exec(function(err, users) {
+        	//if (err) throw err;
+            //res.view({
+                //members: users,
+                //testItems: testItems,
+                //this_is_a_test: this_is_a_test,
+            //});
+        //});
 
 
 		//same as above
