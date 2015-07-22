@@ -6,7 +6,6 @@ module.exports = {
             {whatup: 'hello!', mhm: 'awww-yis', soo: '1234'}
         ];
 
-        var member_array = [];
 
 
         /*User.find().exec(function(err, users) {
@@ -20,9 +19,8 @@ module.exports = {
         });*/
 
 		//same as above
-     	User.getAll().spread(function(models) {
+     	member_array = User.getAll().spread(function(models) {
 
-     		member_array.push(models);
 
             //res.view({
                 //members: models,
