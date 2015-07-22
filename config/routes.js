@@ -37,13 +37,16 @@ module.exports.routes = {
     action: 'index'
   },
 
+  'get /*': {
+    controller: 'TestController',
+    action: 'index'
+  },
+
   'get /login': 'AuthController.login',
   'get /logout': 'AuthController.logout',
   'get /register': 'AuthController.register',
 
-
   'get /test': 'TestController.index',
-
 
   'post /auth/local': 'AuthController.callback',
   'post /auth/local/:action': 'AuthController.callback',
@@ -54,10 +57,7 @@ module.exports.routes = {
   'get /api/user': 'UserController.getAll',
   'get /api/user/:id': 'UserController.getOne',
 
-
   //'get /api/user/:slug': 'UserController.profile',
-
-
   'post /api/user': 'UserController.create',
 
 
@@ -72,42 +72,28 @@ module.exports.routes = {
 
   'get /api/post': 'TestController.getAll',
   'get /api/post/:id': 'TestController.getOne',
-  'get /api/post/:id/views': 'TestController.getOne',
-  'get /api/post/:id/votes': 'TestController.getOne',
-
   'post /api/post': 'TestController.create',
-  'post /api/post/:id/vote': 'TestController.vote',
-
-
   'delete /api/post/:id': 'TestController.destroy',
 
+  'get /api/views/:id': 'TestController.getOne',
 
+  'get /api/votes/:id': 'TestController.getOne',
+  'post /api/vote/:id': 'TestController.vote',
+  'delete /api/vote/:id': 'TestController.destroy',
 
-
-  // If a request to a URL doesn't match any of the custom routes above, it is matched 
-  // against Sails route blueprints.  See `config/blueprints.js` for configuration options
-  // and examples.
 
   'get /home': 'HomeController.index',
   'get /about': 'HomeController.index',
   'get /messages': 'HomeController.index',
   'get /search': 'HomeController.index',
 
-
   'get /member': 'HomeController.index',
   'get /member/:id': 'HomeController.index',
 
   'get /member/:slug': 'HomeController.index'
 
-
-
-
-
-
-
-
-
-
-
+  // If a request to a URL doesn't match any of the custom routes above, it is matched 
+  // against Sails route blueprints.  See `config/blueprints.js` for configuration options
+  // and examples.
 
 };
