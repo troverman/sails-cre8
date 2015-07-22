@@ -14,7 +14,7 @@ module.exports = {
                 testItems: User.find().exec(function(err, users) {
                     if (err) throw err;
                     return users;
-                },
+                }),
                 this_is_a_test: found
             });
 
