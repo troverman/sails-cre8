@@ -7,12 +7,12 @@ module.exports = {
         ];
 
 
-        User.getAll().exec(function(err, users) {
+        User.getAll().spread(function(models) {
 
         	//if (err) throw err;
 
             res.view({
-                members: users
+                members: models
             });
 
         });
