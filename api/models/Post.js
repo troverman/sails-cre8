@@ -33,14 +33,14 @@ module.exports = {
     },
 
     getAll: function() {
-        return User.find()
+        return Post.find()
         .then(function (models) {
             return [models];
         });
     },
 
     getOne: function(id) {
-        return User.findOne(id)
+        return Post.findOne(id)
         .then(function (model) {
             return [model];
         });
