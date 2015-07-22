@@ -6,7 +6,9 @@ module.exports = {
             {whatup: 'hello!', mhm: 'awww-yis', soo: '1234'}
         ];
 
-
+        res.view({
+            testItems: testItems
+        });
 
         /*User.find().exec(function(err, users) {
 
@@ -19,19 +21,13 @@ module.exports = {
         });*/
 
 		//same as above
-     	member_array = User.getAll().spread(function(models) {
+     	User.getAll().spread(function(models) {
 
 
-            //res.view({
-                //members: models,
+            res.view({
+                members: models
                 //testItems: testItems
-            //});
+            });
         });
-
-        res.view({
-            testItems: testItems,
-            members: member_array,
-        });
-
     }
 };
