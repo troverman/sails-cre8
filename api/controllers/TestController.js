@@ -23,9 +23,9 @@ module.exports = {
             });
         });
 
-        res.view({
-            testItems: testItems
-        });
+        //res.view({
+            //testItems: testItems
+        //});
 
     }
 };
