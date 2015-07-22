@@ -19,7 +19,8 @@ module.exports = {
 		//same as above
      	User.getAll().spread(function(models) {
             res.view({
-                members: models
+                members: models,
+                testItems: testItems
             });
         });
 
