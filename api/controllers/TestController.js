@@ -9,7 +9,6 @@ module.exports = {
         /*User.find().exec(function(err, users) {
 
         	if (err) throw err;
-
             res.view({
                 members: users
             });
@@ -18,12 +17,11 @@ module.exports = {
 
 		//same as above
      	User.getAll().spread(function(models) {
-
-
             res.view({
                 members: models,
                 testItems: testItems
-            });
+            })
+           	.fail(function(err) {});
         });
     }
 };
