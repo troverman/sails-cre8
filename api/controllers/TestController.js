@@ -7,7 +7,7 @@ module.exports = {
         ];
 
 
-        this_is_a_test = User.find({username:'trevor'}).exec(function (err, found){
+        this_is_a_test = User.find({username:'troverman'}).exec(function (err, found){
 
             res.view({
                 //members: users,
