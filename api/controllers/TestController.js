@@ -7,9 +7,9 @@ module.exports = {
         ];
 
 
-        User.find().then(function(err, users) {
+        User.getAll().then(function(err, users) {
 
-        	if (err) throw err;
+        	//if (err) throw err;
 
             res.view({
                 members: users
