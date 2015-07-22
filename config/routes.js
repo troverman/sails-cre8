@@ -85,12 +85,7 @@ module.exports.routes = {
   'get /member': 'HomeController.index',
   'get /member/:id': 'HomeController.index',
 
-  'get /member/:slug': 'HomeController.index',
-
-  'get /*': {
-    controller: 'TestController',
-    action: 'index'
-  }
+  'get /member/:slug': 'HomeController.index'
 
   // If a request to a URL doesn't match any of the custom routes above, it is matched 
   // against Sails route blueprints.  See `config/blueprints.js` for configuration options
