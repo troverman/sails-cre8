@@ -8,7 +8,7 @@ module.exports = {
 
         var test = User.getAll();
 
-        User.find().exec(function(err, users) {
+        /*User.find().exec(function(err, users) {
 
         	if (err) throw err;
 
@@ -16,7 +16,9 @@ module.exports = {
                 members: users
             });
 
-        });
+        });*/
+
+        res.view({members:test});
 
 		//User.getAll()
 		//.exec(function(err, models) {
