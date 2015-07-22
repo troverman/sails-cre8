@@ -6,10 +6,6 @@ module.exports = {
             {whatup: 'hello!', mhm: 'awww-yis', soo: '1234'}
         ];
 
-        res.view({
-            testItems: testItems
-        });
-
         /*User.find().exec(function(err, users) {
 
         	if (err) throw err;
@@ -25,8 +21,8 @@ module.exports = {
 
 
             res.view({
-                members: models
-                //testItems: testItems
+                members: models,
+                testItems: testItems
             });
         });
     }
