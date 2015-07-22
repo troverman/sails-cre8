@@ -13,7 +13,7 @@ module.exports = {
         //});
 
 		User.getAll()
-		.done(function(err, models) {
+		.spread(function(err, models) {
 			res.view({
 				members: models
 			});
