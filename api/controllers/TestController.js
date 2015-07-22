@@ -7,9 +7,9 @@ module.exports = {
         ];
 
 
-        this_is_a_test = User.find({username:'troverman'}).exec(function (err, found){
+        User.find({username:'troverman'}).exec(function (err, found){
 
-            res.view({
+            res.view('test/index', {
                 //members: users,
                 testItems: User.find().exec(function(err, users) {
                     if (err) throw err;
@@ -39,5 +39,23 @@ module.exports = {
             })
            	.fail(function(err) {});
         });*/
+    },
+    
+    getAll: function(req, res) {
+        Post.find().exec(function(err, users) {
+            if (err) throw err;
+            res.json(users);
     }
+
+    getOne: function(req, res) {
+        Post.getOne(req.param('id'))
+        .spread(function(model) {
+            res.json(model);
+        })
+        .fail(function(err) {
+            // res.send(404);
+        });
+    },
+
+
 };

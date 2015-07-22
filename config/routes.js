@@ -70,6 +70,20 @@ module.exports.routes = {
   'post /api/message': 'MessageController.create',
   'delete /api/message/:id': 'MessageController.destroy',
 
+  'get /api/post': 'TestController.getAll',
+  'get /api/post/:id': 'TestController.getOne',
+  'get /api/post/:id/views': 'TestController.getOne',
+  'get /api/post/:id/votes': 'TestController.getOne',
+
+  'post /api/post': 'TestController.create',
+  'post /api/post/:id/vote': 'TestController.vote',
+
+
+  'delete /api/post/:id': 'TestController.destroy',
+
+
+
+
   // If a request to a URL doesn't match any of the custom routes above, it is matched 
   // against Sails route blueprints.  See `config/blueprints.js` for configuration options
   // and examples.
