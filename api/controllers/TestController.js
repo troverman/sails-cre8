@@ -6,18 +6,6 @@ module.exports = {
             {whatup: 'hello!', mhm: 'awww-yis', soo: '1234'}
         ];
 
-
-        User.getAll().spread(function(models) {
-
-        	//if (err) throw err;
-
-            res.view({
-                members: models
-            });
-
-        });
-
-
         /*User.find().exec(function(err, users) {
 
         	if (err) throw err;
@@ -28,17 +16,16 @@ module.exports = {
 
         });*/
 
-        //res.view({members:test});
+		//same as above
+     	User.getAll().spread(function(models) {
+            res.view({
+                members: models
+            });
+        });
 
-		//User.getAll()
-		//.exec(function(err, models) {
-			//res.view({
-				//members: models
-			//});
-		//});
-        //res.view({
-            //testItems: testItems
-        //});
+        res.view({
+            testItems: testItems
+        });
 
     }
 };
