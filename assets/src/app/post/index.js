@@ -11,7 +11,7 @@ angular.module( 'sailng.post', [
 			}
 		},
 		resolve: {
-            messages: function(PostModel) {
+            posts: function(PostModel) {
                 return PostModel.getAll().then(function(models) {
                     return models;
                 });
@@ -20,7 +20,7 @@ angular.module( 'sailng.post', [
 	});
 })
 
-.controller( 'PostCtrl', function PostController( $scope, $sailsSocket, lodash, titleService, config, PostModel, messages) {
+.controller( 'PostCtrl', function PostController( $scope, $sailsSocket, lodash, titleService, config, PostModel) {
 	titleService.setTitle('post');
 
     $scope.currentUser = config.currentUser;
