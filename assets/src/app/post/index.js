@@ -22,8 +22,8 @@ angular.module( 'sailng.post', [
 	titleService.setTitle('post');
 
 	$scope.master = {};
-	$scope.newPost = {};
-    $scope.posts = posts;
+	//$scope.newPost = {};
+    //$scope.posts = posts;
 
     /*$sailsSocket.subscribe('post', function (envelope) {
 	    switch(envelope.verb) {
@@ -34,14 +34,14 @@ angular.module( 'sailng.post', [
 	            lodash.remove($scope.posts, {id: envelope.id});
 	            break;
 	    }
-    });*/
+    });
 
 	$scope.createPost = function(newMessage) {
         newPost.user = config.currentUser.id;
         PostModel.create(newPost).then(function(model) {
             $scope.newPost = {};
         });
-    };
+    };*/
 
 	$scope.update = function(post) {
 		$scope.master = angular.copy(post);
