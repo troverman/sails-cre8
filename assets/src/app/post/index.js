@@ -18,7 +18,7 @@ angular.module( 'sailng.post', [
 	});
 })
 
-.controller( 'PostCtrl', function PostController( $scope, titleService, posts) {
+.controller( 'PostCtrl', function PostController( $scope, titleService) {
 	titleService.setTitle('post');
 
 	$scope.master = {};
