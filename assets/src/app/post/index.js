@@ -22,7 +22,7 @@ angular.module( 'sailng.post', [
 	titleService.setTitle('post');
 
 	$scope.master = {};
-	//$scope.newPost = {};
+	$scope.newPost = {};
     //$scope.posts = posts;
 
     /*$sailsSocket.subscribe('post', function (envelope) {
