@@ -3,7 +3,6 @@ angular.module( 'sailng', [
     'sails.io',
     'angularMoment',
     'lodash',
-    'angularMoment',
     'ui.bootstrap',
     'templates-app',
     'services',

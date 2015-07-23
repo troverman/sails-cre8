@@ -8,11 +8,6 @@
 module.exports = {
 
 	attributes: {
-        member_id: {
-            type: 'string',
-            required: true,
-            unique: true
-        },
         title: {
             type: 'string',
             required: true,
@@ -29,6 +24,10 @@ module.exports = {
             type: 'string',
             required: true,
             unique: true
+        },
+        user: {
+            model: 'user',
+            required: true
         }
     },
 
