@@ -11,21 +11,16 @@ angular.module( 'sailng.post', [
 			}
 		},
 		resolve: {
-            messages: function(MessageModel) {
-                return MessageModel.getAll().then(function(models) {
-                    return models;
-                });
-            }
+            posts: function() {}
         }
 	});
 })
 
-.controller( 'PostCtrl', function PostController( $scope, $sailsSocket, lodash, titleService, config, PostModel, messages) {
+.controller( 'PostCtrl', function PostController( $scope, $sailsSocket, lodash, titleService, config, PostModel) {
 	titleService.setTitle('post');
 	$scope.newPost = {};
     //$scope.posts = posts;
     $scope.currentUser = config.currentUser;
-	//$scope.master = {};
 
     $sailsSocket.subscribe('post', function (envelope) {
 	    switch(envelope.verb) {
