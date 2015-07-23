@@ -67,9 +67,6 @@ module.exports.routes = {
 
   'get /api/post': 'TestController.getAll',
   'get /api/post/:id': 'TestController.getOne',
-  //'get /api/post/:url_title': 'TestController.getByUrlTitle',
-
-
   'post /api/post': 'TestController.create',
   'delete /api/post/:id': 'TestController.destroy',
 
