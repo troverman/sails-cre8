@@ -20,21 +20,21 @@ angular.module( 'sailng.post', [
 	});
 })
 
-.controller( 'PostCtrl', function PostController( $scope, $sailsSocket, lodash, titleService, config, PostModel) {
+.controller( 'PostCtrl', function PostController( $scope, $sailsSocket, lodash, titleService, config, PostModel, posts) {
 	titleService.setTitle('post');
 
     $scope.currentUser = config.currentUser;
 	$scope.master = {};
 	$scope.newPost = {};
-    //$scope.posts = posts;
+    $scope.posts = posts;
 
     $sailsSocket.subscribe('post', function (envelope) {
 	    switch(envelope.verb) {
 	        case 'created':
-	            //$scope.posts.unshift(envelope.data);
+	            $scope.posts.unshift(envelope.data);
 	            break;
 	        case 'destroyed':
-	            //lodash.remove($scope.posts, {id: envelope.id});
+	            lodash.remove($scope.posts, {id: envelope.id});
 	            break;
 	    }
     });
