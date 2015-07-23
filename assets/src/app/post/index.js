@@ -24,11 +24,11 @@ angular.module( 'sailng.post', [
 	$scope.master = {};
 
 	$scope.update = function(post) {
-	$scope.master = angular.copy(post);
+		$scope.master = angular.copy(post);
 	};
 
 	$scope.reset = function() {
-	$scope.post = angular.copy($scope.master);
+		$scope.post = {};
 	};
 
 	$scope.reset();
