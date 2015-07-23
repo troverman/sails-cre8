@@ -52,7 +52,7 @@ angular.module( 'sailng.post', [
         views: {
             "main": {
                 controller: 'PostCtrl',
-                templateUrl: 'posts/index.tpl.html'
+                templateUrl: 'post/index.tpl.html'
             }
         },
         resolve: {
