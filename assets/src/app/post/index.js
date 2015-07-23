@@ -16,7 +16,7 @@ angular.module( 'sailng.post', [
 			}
 		},
 		resolve: {
-            posts: function(MessageModel) {
+            posts: function(PostModel) {
                 return PostModel.getAll().then(function(models) {
                     return models;
                 });
