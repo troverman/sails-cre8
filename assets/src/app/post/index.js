@@ -65,10 +65,9 @@ angular.module( 'sailng.post', [
     });
 })
 
-.controller( 'PostCtrl', function PostController( $scope, postModel, posts ) {
+.controller( 'PostCtrl', function PostController( $scope, titleService, postModel, posts ) {
     titleService.setTitle('posts');
     $scope.newPost = {};
-    $scope.posts = posts;
     /*$scope.currentUser = config.currentUser;
 
     $sailsSocket.subscribe('post', function (envelope) {
