@@ -9,7 +9,7 @@ angular.module( 'sailng.post', [
 				controller: 'PostCtrl',
 				templateUrl: 'post/index.tpl.html'
 			}
-		}s
+		}
 	});
 })
 
