@@ -14,17 +14,24 @@ angular.module( 'sailng.post', [
 				controller: 'PostCtrl',
 				templateUrl: 'post/index.tpl.html'
 			}
-		}
+		},
+		resolve: {
+            posts: function(MessageModel) {
+                return PostModel.getAll().then(function(models) {
+                    return models;
+                });
+            }
+        }
 	});
 })
 
-.controller( 'PostCtrl', function PostController( $scope, titleService, config, PostModel) {
+.controller( 'PostCtrl', function PostController( $scope, titleService, config, PostModel, posts) {
 	titleService.setTitle('post');
 
     $scope.currentUser = config.currentUser;
 	$scope.master = {};
 	$scope.newPost = {};
-    //$scope.posts = posts;
+    $scope.posts = posts;
 
     /*$sailsSocket.subscribe('post', function (envelope) {
 	    switch(envelope.verb) {
