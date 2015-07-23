@@ -20,9 +20,10 @@ angular.module( 'sailng.post', [
 
 .controller( 'PostCtrl', function PostController( $scope, titleService) {
 	titleService.setTitle('post');
-	/*$scope.newPost = {};
-    $scope.posts = posts;
 
+	$scope.master = {};
+	$scope.newPost = {};
+    $scope.posts = posts;
 
     $sailsSocket.subscribe('post', function (envelope) {
 	    switch(envelope.verb) {
@@ -33,26 +34,21 @@ angular.module( 'sailng.post', [
 	            lodash.remove($scope.posts, {id: envelope.id});
 	            break;
 	    }
-    });*/
+    });
 
-
-
-
-	$scope.master = {};
-
-	/*$scope.createPost = function(newMessage) {
+	$scope.createPost = function(newMessage) {
         newPost.user = config.currentUser.id;
         PostModel.create(newPost).then(function(model) {
             $scope.newPost = {};
         });
-    };*/
+    };
 
 	$scope.update = function(post) {
 		$scope.master = angular.copy(post);
 	};
 
 	$scope.reset = function() {
-	  $scope.post = angular.copy($scope.master);
+		$scope.post = angular.copy($scope.master);
 	};
 
 	$scope.reset();
