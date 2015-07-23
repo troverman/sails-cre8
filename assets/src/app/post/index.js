@@ -9,6 +9,13 @@ angular.module( 'sailng.post', [
 				controller: 'PostCtrl',
 				templateUrl: 'post/index.tpl.html'
 			}
+		},
+		resolve: {
+			messages: function(MessageModel) {
+            	return MessageModel.getAll().then(function(models) {
+                	return models;
+            	});
+        	}
 		}
 	});
 })
