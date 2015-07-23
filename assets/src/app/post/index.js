@@ -25,7 +25,7 @@ angular.module( 'sailng.post', [
 	$scope.newPost = {};
     $scope.posts = posts;
 
-    $sailsSocket.subscribe('post', function (envelope) {
+    /*$sailsSocket.subscribe('post', function (envelope) {
 	    switch(envelope.verb) {
 	        case 'created':
 	            $scope.posts.unshift(envelope.data);
@@ -34,7 +34,7 @@ angular.module( 'sailng.post', [
 	            lodash.remove($scope.posts, {id: envelope.id});
 	            break;
 	    }
-    });
+    });*/
 
 	$scope.createPost = function(newMessage) {
         newPost.user = config.currentUser.id;
