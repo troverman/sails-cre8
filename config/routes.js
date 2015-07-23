@@ -65,10 +65,10 @@ module.exports.routes = {
   'post /api/message': 'MessageController.create',
   'delete /api/message/:id': 'MessageController.destroy',
 
-  'get /api/post': 'TestController.getAll',
-  'get /api/post/:id': 'TestController.getOne',
-  'post /api/post': 'TestController.create',
-  'delete /api/post/:id': 'TestController.destroy',
+  'get /api/post': 'PostController.getAll',
+  'get /api/post/:id': 'PostController.getOne',
+  'post /api/post': 'PostController.create',
+  'delete /api/post/:id': 'PostController.destroy',
 
   'get /api/views/:id': 'TestController.getOne',
 

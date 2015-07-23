@@ -57,7 +57,7 @@ module.exports = {
         });
     },
 
-    getByUrlTitle: function(req, res) {
+    //getByUrlTitle: function(req, res) {
         //Post.getByUrlTitle(req.param('url_title'))
         //.spread(function(model) {
             //res.json(model);
@@ -65,7 +65,7 @@ module.exports = {
         //.fail(function(err) {
             // res.send(404);
         //});
-    },
+    //},
 
     vote: function() {}
 

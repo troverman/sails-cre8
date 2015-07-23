@@ -14,7 +14,6 @@ angular.module( 'sailng', [
     'sailng.member',
     'sailng.messages',
     'sailng.post',
-
     'sailng.search'
 
 ])

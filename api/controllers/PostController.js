@@ -44,9 +44,35 @@ module.exports = {
 				return console.log(err);
 			}
 			else {
-				Message.publishCreate(post);
+				Post.publishCreate(post);
 				res.json(post);
 			}
+		});
+	},
+
+	destroy: function (req, res) {
+		var id = req.param('id');
+		if (!id) {
+			return res.badRequest('No id provided.');
+		}
+
+		// Otherwise, find and destroy the model in question
+		Post.findOne(id).exec(function(err, model) {
+			if (err) {
+				return res.serverError(err);
+			}
+			if (!model) {
+				return res.notFound();
+			}
+
+			Post.destroy(id, function(err) {
+				if (err) {
+					return res.serverError(err);
+				}
+
+				Post.publishDestroy(model.id);
+				return res.json(model);
+			});
 		});
 	}
 	
