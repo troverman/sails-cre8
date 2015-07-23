@@ -11,8 +11,8 @@ angular.module( 'sailng.post', [
 			}
 		},
 		resolve: {
-			messages: function(MessageModel) {
-            	return MessageModel.getAll().then(function(models) {
+			posts: function(PostModel) {
+            	return PostModel.getAll().then(function(models) {
                 	return models;
             	});
         	}
@@ -20,10 +20,10 @@ angular.module( 'sailng.post', [
 	});
 })
 
-.controller( 'PostCtrl', function PostController( $scope, $sailsSocket, lodash, titleService, config, PostModel) {
+.controller( 'PostCtrl', function PostController( $scope, $sailsSocket, lodash, titleService, config, PostModel, posts) {
 	titleService.setTitle('post');
 	$scope.newPost = {};
-    $scope.posts = {};
+    $scope.posts = posts;
     $scope.currentUser = config.currentUser;
 
     $sailsSocket.subscribe('post', function (envelope) {
