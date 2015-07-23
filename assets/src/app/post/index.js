@@ -20,7 +20,7 @@ angular.module( 'sailng.post', [
 
 .controller( 'PostCtrl', function PostController( $scope, titleService, posts, PostModel) {
 	titleService.setTitle('post');
-	$scope.newPost = {};
+	/*$scope.newPost = {};
     $scope.posts = posts;
 
 
@@ -33,19 +33,19 @@ angular.module( 'sailng.post', [
 	            lodash.remove($scope.posts, {id: envelope.id});
 	            break;
 	    }
-    });
+    });*/
 
 
 
 
 	$scope.master = {};
 
-	$scope.createPost = function(newMessage) {
+	/*$scope.createPost = function(newMessage) {
         newPost.user = config.currentUser.id;
         PostModel.create(newPost).then(function(model) {
             $scope.newPost = {};
         });
-    };
+    };*/
 
 	$scope.update = function(post) {
 		$scope.master = angular.copy(post);
