@@ -3,12 +3,7 @@ angular.module( 'sailng.post', [
 
 .config(function config( $stateProvider ) {
 	$stateProvider.state( 'post', {
-		url: '/post/:memberID',
-        controller: function($scope, $stateParams) {
-            // get the id
-            $scope.id = $stateParams.memberID;
-
-        },
+		url: '/post',
 		views: {
 			"main": {
 				controller: 'PostCtrl',
