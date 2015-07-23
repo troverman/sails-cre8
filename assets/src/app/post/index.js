@@ -22,8 +22,8 @@ angular.module( 'sailng.post', [
 	titleService.setTitle('post');
 
 	$scope.master = {};
-	//$scope.newPost = {};
-    //$scope.posts = posts;
+	$scope.newPost = {};
+    $scope.posts = posts;
 
     /*$sailsSocket.subscribe('post', function (envelope) {
 	    switch(envelope.verb) {
