@@ -25,8 +25,8 @@
   <form role="form" ng-submit="createMessage(newMessage)">
     <div class="form-group">
     <label for="messageTitle">Your Message</label>
-      <input type="text" ng-model="post.title" class="form-control" id="postTitle" ng-disabled="!currentUser">
-      <input type="text" ng-model="post.content" class="form-control" id="postContent" ng-disabled="!currentUser">
+      <input type="text" ng-model="post.title" class="form-control" id="postTitle">
+      <input type="text" ng-model="post.content" class="form-control" id="postContent">
     </div>
     <button type="submit" class="btn btn-primary" ng-disabled="!currentUser || !newPost.title">Submit</button>
   </form>
