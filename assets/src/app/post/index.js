@@ -52,7 +52,7 @@ angular.module( 'sailng.post', [
 	};
 
 	$scope.reset = function() {
-		$scope.post = {};
+	  $scope.post = angular.copy($scope.master);
 	};
 
 	$scope.reset();
