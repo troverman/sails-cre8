@@ -7,7 +7,6 @@ angular.module( 'sailng', [
     'templates-app',
     'services',
     'models',
-
     'sailng.header',
     'sailng.home',
     'sailng.about',
