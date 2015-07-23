@@ -1,17 +1,30 @@
 <div ng-controller="PostCtrl">
 
+  <form novalidate class="simple-form">
+    Name: <input type="text" ng-model="post.name" /><br />
+    E-mail: <input type="email" ng-model="post.email" /><br />
+    Gender: <input type="radio" ng-model="post.gender" value="male" />male
+    <input type="radio" ng-model="post.gender" value="female" />female<br />
+    <input type="button" ng-click="reset()" value="Reset" />
+    <input type="submit" ng-click="update(post)" value="Save" />
+  </form>
+
   <pre>form = {{post | json}}</pre>
   <pre>master = {{master | json}}</pre>
+
 
   <form role="form" ng-submit="createPost(newPost)">
     <div class="form-group">
     <label for="PostTitle">PostTitle</label>
     <label for="PostContent">PostContent</label>
-      <input type="text" ng-model="post.title" class="form-control" id="postTitle">
-      <input type="text" ng-model="post.content" class="form-control" id="postContent">
+      <input type="text" ng-model="newPost.title" class="form-control" id="postTitle">
+      <input type="text" ng-model="newPost.content" class="form-control" id="postContent">
     </div>
-    <button type="submit" class="btn btn-primary" ng-disabled="!currentUser || !newPost.title">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+
+  <pre>form = {{newPost | json}}</pre>
+
 
   <div id="post-container" class="col-md-6">
     <ul>
