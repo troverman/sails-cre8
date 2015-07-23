@@ -1,6 +1,7 @@
 module.exports = {
     index: function(req, res) {
         var navItems = [
+            {url: '/post', cssClass: 'fa fa-comments', title: 'Messages'},
             {url: '/messages', cssClass: 'fa fa-comments', title: 'Messages'},
             {url: '/about', cssClass: 'fa fa-infoc-circle', title: 'About'}
         ];
