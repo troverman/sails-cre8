@@ -9,14 +9,14 @@ angular.module( 'sailng.post', [
 				controller: 'PostCtrl',
 				templateUrl: 'post/index.tpl.html'
 			}
-		}
-		/*resolve: {
+		},
+		resolve: {
             posts: function(PostModel) {
                 return PostModel.getAll().then(function(models) {
                     return models;
                 });
             }
-        }*/
+        }
 	});
 })
 
