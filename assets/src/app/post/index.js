@@ -51,7 +51,7 @@ angular.module( 'sailng.post', [
         url: '/post',
         views: {
             "main": {
-                controller: 'PostController',
+                controller: 'PostCtrl',
                 templateUrl: 'posts/index.tpl.html'
             }
         },
@@ -65,7 +65,7 @@ angular.module( 'sailng.post', [
     });
 })
 
-.controller( 'PostController', function PostController( $scope, $sailsSocket, lodash, config, titleService, postModel, posts ) {
+.controller( 'PostCtrl', function PostController( $scope, $sailsSocket, lodash, config, titleService, postModel, posts ) {
     titleService.setTitle('posts');
     $scope.newPost = {};
     $scope.posts = posts;
