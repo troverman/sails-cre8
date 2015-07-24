@@ -51,6 +51,7 @@ angular.module( 'sailng.post', [
         PostModel.create(newPost).then(function(model) {
             $scope.newPost = {};
         });
+        console.log(newPost);
     };
 
 });
