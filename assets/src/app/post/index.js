@@ -72,7 +72,7 @@ angular.module( 'sailng.post', [
         },
         resolve: {
             posts: function(MessageModel) {
-                return PostModel.getAll().then(function(models) {
+                return MessageModel.getAll().then(function(models) {
                     return models;
                 });
             }
@@ -100,16 +100,18 @@ angular.module( 'sailng.post', [
 
     $scope.destroyPost = function(message) {
         // check here if this message belongs to the currentUser
+        console.log(message);
         if (message.user.id === config.currentUser.id) {
-            PostModel.delete(message).then(function(model) {
+            MessageModel.delete(message).then(function(model) {
                 // message has been deleted, and removed from $scope.messages
             });
         }
     };
 
     $scope.createPost = function(newPost) {
+        console.log(newPost);
         newPost.user = config.currentUser.id;
-        PostModel.create(newPost).then(function(model) {
+        MessageModel.create(newPost).then(function(model) {
             $scope.newPost = {};
         });
     };
