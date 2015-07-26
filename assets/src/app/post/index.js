@@ -47,6 +47,7 @@ angular.module( 'sailng.post', [
     };
 
 	$scope.createPost = function(newPost) {
+		console.log(newPost);
         newPost.user = config.currentUser.id;
         PostModel.create(newPost).then(function(model) {
         	console.log(newPost);
