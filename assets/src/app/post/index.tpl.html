@@ -3,13 +3,17 @@
 <br><br><br>
 <h3>new post</h3>
 
+
+
 <form role="form" ng-submit="createPost(newPost)">
   <div class="form-group">
-    <input type="text" ng-model="newPost.title" class="form-control" id="postTitle">
-    <input type="text" ng-model="newPost.post_content" class="form-control" id="postContent">
+  <label for="postTitle">Title</label>
+    <input type="text" ng-model="newPost.title" class="form-control" id="postTitle" ng-disabled="!currentUser">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" ng-disabled="!currentUser || !newPost.title">Submit</button>
 </form>
+
+
 
 <pre>form = {{newPost | json}}</pre>
 
