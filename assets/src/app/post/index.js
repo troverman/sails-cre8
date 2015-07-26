@@ -50,9 +50,9 @@ angular.module( 'sailng.post', [
         //newPost.user = config.currentUser.id;
         PostModel.create(newPost).then(function(model) {
         	console.log(newPost);
+        	console.log(model);
             $scope.newPost = {};
         });
-        console.log(newPost);
     };
 
 });
