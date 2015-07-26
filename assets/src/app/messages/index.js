@@ -48,7 +48,9 @@ angular.module( 'sailng.messages', [
 
     $scope.createMessage = function(newMessage) {
         newMessage.user = config.currentUser.id;
+        console.log(newMessage);
         MessageModel.create(newMessage).then(function(model) {
+            console.log(model);
             $scope.newMessage = {};
         });
     };
