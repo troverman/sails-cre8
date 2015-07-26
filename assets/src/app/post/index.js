@@ -72,7 +72,7 @@ angular.module( 'sailng.post', [
         },
         resolve: {
             posts: function(MessageModel) {
-                return MessageModel.getAll().then(function(models) {
+                return PostModel.getAll().then(function(models) {
                     return models;
                 });
             }
@@ -81,12 +81,12 @@ angular.module( 'sailng.post', [
 })
 
 .controller( 'PostController', function PostController( $scope, $sailsSocket, lodash, config, titleService, MessageModel, posts ) {
-    titleService.setTitle('Messages');
+    titleService.setTitle('Post');
     $scope.newPost = {};
     $scope.posts = posts;
     $scope.currentUser = config.currentUser;
 
-    $sailsSocket.subscribe('message', function (envelope) {
+    $sailsSocket.subscribe('post', function (envelope) {
         switch(envelope.verb) {
             case 'created':
                 console.log(envelope.data);
@@ -102,7 +102,7 @@ angular.module( 'sailng.post', [
         // check here if this message belongs to the currentUser
         console.log(message);
         if (message.user.id === config.currentUser.id) {
-            MessageModel.delete(message).then(function(model) {
+            PostModel.delete(message).then(function(model) {
                 // message has been deleted, and removed from $scope.messages
             });
         }
@@ -111,7 +111,7 @@ angular.module( 'sailng.post', [
     $scope.createPost = function(newPost) {
         console.log(newPost);
         newPost.user = config.currentUser.id;
-        MessageModel.create(newPost).then(function(model) {
+        PostModel.create(newPost).then(function(model) {
             $scope.newPost = {};
         });
     };
