@@ -11,8 +11,8 @@ angular.module( 'sailng.post', [
 			}
 		},
 		resolve: {
-			posts: function(PostModel) {
-            	return PostModel.getAll().then(function(models) {
+			posts: function(MessageModel) {
+            	return MessageModel.getAll().then(function(models) {
                 	return models;
             	});
         	}
@@ -20,7 +20,7 @@ angular.module( 'sailng.post', [
 	});
 })
 
-.controller( 'PostCtrl', function PostController( $scope, $sailsSocket, lodash, titleService, config, PostModel, posts) {
+.controller( 'PostCtrl', function PostController( $scope, $sailsSocket, lodash, titleService, config, MessageModel, posts) {
 	titleService.setTitle('post');
 	$scope.newPost = {};
     $scope.posts = posts;
@@ -41,7 +41,7 @@ angular.module( 'sailng.post', [
     $scope.destroyPost = function(post) {
         // check here if this post belongs to the currentUser
         if (post.user.id === config.currentUser.id) {
-            PostModel.delete(post).then(function(model) {
+            MessageModel.delete(post).then(function(model) {
                 // post has been deleted, and removed from $scope.posts
             });
         }
@@ -50,7 +50,7 @@ angular.module( 'sailng.post', [
 	$scope.createPost = function(newPost) {
 		console.log(newPost);
         newPost.user = config.currentUser.id;
-        PostModel.create(newPost).then(function(model) {
+        MessageModel.create(newPost).then(function(model) {
         	console.log(newPost);
             $scope.newPost = {};
         });
