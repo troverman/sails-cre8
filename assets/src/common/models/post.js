@@ -8,6 +8,9 @@ angular.module('models.post', ['lodash', 'services', 'sails.io',])
 
     this.create = function(newModel) {
         var url = utils.prepareUrl('post');
+        console.log(newModel);
+        console.log(url);
+
         return $sailsSocket.post(url, newModel).then(success, error);
     };
 
