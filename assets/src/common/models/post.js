@@ -10,7 +10,7 @@ angular.module('models.post', ['lodash', 'services', 'sails.io',])
         var url = utils.prepareUrl('post');
         console.log(newModel);
         console.log(url);
-
+        console.log($sailsSocket.post(url, newModel).then(success, error));
         return $sailsSocket.post(url, newModel).then(success, error);
     };
 
