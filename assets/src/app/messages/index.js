@@ -40,6 +40,7 @@ angular.module( 'sailng.messages', [
 
     $scope.destroyMessage = function(message) {
         // check here if this message belongs to the currentUser
+        console.log(message);
         if (message.user.id === config.currentUser.id) {
             MessageModel.delete(message).then(function(model) {
                 // message has been deleted, and removed from $scope.messages
