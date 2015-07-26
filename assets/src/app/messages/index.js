@@ -29,6 +29,7 @@ angular.module( 'sailng.messages', [
     $sailsSocket.subscribe('message', function (envelope) {
         switch(envelope.verb) {
             case 'created':
+                console.log(envelope.data);
                 $scope.messages.unshift(envelope.data);
                 break;
             case 'destroyed':
