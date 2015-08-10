@@ -15,6 +15,83 @@
         "createdAt": "2015-07-03T22:32:20.691Z",
         "updatedAt": "2015-07-03T22:32:20.691Z",
         "id": 2
+      },
+      {
+        "title": "rere",
+        "user": 1,
+        "createdAt": "2015-08-02T18:59:49.210Z",
+        "updatedAt": "2015-08-02T18:59:49.210Z",
+        "id": 3
+      },
+      {
+        "title": "okijuhgf",
+        "user": 1,
+        "createdAt": "2015-08-02T19:00:02.357Z",
+        "updatedAt": "2015-08-02T19:00:02.357Z",
+        "id": 4
+      },
+      {
+        "title": ";plokijh",
+        "user": 1,
+        "createdAt": "2015-08-02T19:00:08.530Z",
+        "updatedAt": "2015-08-02T19:00:08.530Z",
+        "id": 5
+      },
+      {
+        "title": "f",
+        "user": 1,
+        "createdAt": "2015-08-02T19:01:14.572Z",
+        "updatedAt": "2015-08-02T19:01:14.572Z",
+        "id": 6
+      },
+      {
+        "title": "er",
+        "user": 1,
+        "createdAt": "2015-08-02T19:04:24.379Z",
+        "updatedAt": "2015-08-02T19:04:24.379Z",
+        "id": 7
+      },
+      {
+        "title": "kjhg",
+        "user": 1,
+        "createdAt": "2015-08-02T19:08:21.910Z",
+        "updatedAt": "2015-08-02T19:08:21.910Z",
+        "id": 8
+      },
+      {
+        "title": "fdfd",
+        "user": 1,
+        "createdAt": "2015-08-02T19:09:09.580Z",
+        "updatedAt": "2015-08-02T19:09:09.580Z",
+        "id": 9
+      },
+      {
+        "title": "dd",
+        "user": 1,
+        "createdAt": "2015-08-02T19:09:11.527Z",
+        "updatedAt": "2015-08-02T19:09:11.527Z",
+        "id": 10
+      },
+      {
+        "title": "fdf",
+        "user": 1,
+        "createdAt": "2015-08-02T19:09:48.779Z",
+        "updatedAt": "2015-08-02T19:09:48.779Z",
+        "id": 11
+      },
+      {
+        "title": "fd",
+        "user": 1,
+        "createdAt": "2015-08-02T19:11:04.469Z",
+        "updatedAt": "2015-08-02T19:11:04.469Z",
+        "id": 12
+      },
+      {
+        "title": "fdf",
+        "user": 1,
+        "createdAt": "2015-08-02T19:12:11.648Z",
+        "updatedAt": "2015-08-02T19:12:11.648Z",
+        "id": 13
       }
     ],
     "passport": [
@@ -35,6 +112,87 @@
         "createdAt": "2015-07-03T22:32:11.749Z",
         "updatedAt": "2015-07-03T22:32:11.749Z",
         "id": 1
+      }
+    ],
+    "comment": [],
+    "member": [],
+    "post": [
+      {
+        "title": null,
+        "user": 1,
+        "createdAt": "2015-07-26T23:28:32.675Z",
+        "updatedAt": "2015-07-26T23:28:32.675Z",
+        "id": 1
+      },
+      {
+        "title": null,
+        "user": 1,
+        "createdAt": "2015-07-26T23:28:36.048Z",
+        "updatedAt": "2015-07-26T23:28:36.048Z",
+        "id": 2
+      },
+      {
+        "title": null,
+        "user": 1,
+        "createdAt": "2015-08-02T18:43:50.451Z",
+        "updatedAt": "2015-08-02T18:43:50.451Z",
+        "id": 3
+      },
+      {
+        "title": null,
+        "user": 1,
+        "createdAt": "2015-08-02T18:43:54.312Z",
+        "updatedAt": "2015-08-02T18:43:54.312Z",
+        "id": 4
+      },
+      {
+        "title": null,
+        "user": 1,
+        "createdAt": "2015-08-02T18:47:25.115Z",
+        "updatedAt": "2015-08-02T18:47:25.115Z",
+        "id": 5
+      },
+      {
+        "title": null,
+        "user": 1,
+        "createdAt": "2015-08-02T18:48:06.868Z",
+        "updatedAt": "2015-08-02T18:48:06.868Z",
+        "id": 6
+      },
+      {
+        "title": null,
+        "user": 1,
+        "createdAt": "2015-08-02T18:48:07.777Z",
+        "updatedAt": "2015-08-02T18:48:07.777Z",
+        "id": 7
+      },
+      {
+        "title": null,
+        "user": 1,
+        "createdAt": "2015-08-02T18:48:08.311Z",
+        "updatedAt": "2015-08-02T18:48:08.311Z",
+        "id": 8
+      },
+      {
+        "title": null,
+        "user": 1,
+        "createdAt": "2015-08-02T18:48:08.483Z",
+        "updatedAt": "2015-08-02T18:48:08.483Z",
+        "id": 9
+      },
+      {
+        "title": null,
+        "user": 1,
+        "createdAt": "2015-08-02T18:48:08.801Z",
+        "updatedAt": "2015-08-02T18:48:08.801Z",
+        "id": 10
+      },
+      {
+        "title": null,
+        "user": 1,
+        "createdAt": "2015-08-02T18:48:09.346Z",
+        "updatedAt": "2015-08-02T18:48:09.346Z",
+        "id": 11
       }
     ]
   },
@@ -138,18 +296,80 @@
       "updatedAt": {
         "type": "datetime"
       }
+    },
+    "comment": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "member": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "post": {
+      "lolol": {
+        "type": "string"
+      },
+      "post_content": {
+        "type": "string"
+      },
+      "url_title": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
     }
   },
   "counters": {
     "board": {},
     "message": {
-      "id": 2
+      "id": 13
     },
     "passport": {
       "id": 1
     },
     "user": {
       "id": 1
+    },
+    "comment": {},
+    "member": {},
+    "post": {
+      "id": 11
     }
   }
 }

@@ -1,38 +1,29 @@
 <h3>new post</h3>
 
-<!--<form role="form" ng-submit="createPost(newPost)">
+<form role="form" ng-submit="createPost(newPost)">
   <div class="form-group">
-  <label for="postTitle">Title</label>
-    <input type="text" ng-model="newPost.title" class="form-control" id="postTitle" ng-disabled="!currentUser">
+
+    <label for="postTitle">Post Title</label>
+    <input type="text" ng-model="newPost.lolol" class="form-control" id="postTitle" ng-disabled="!currentUser">
+    <label for="postTitle">Post Content</label>
+    <input type="text" ng-model="newPost.post_content" class="form-control" id="postContent" ng-disabled="!currentUser">
+    <label for="postTitle">Post URL</label>
+    <input type="text" ng-model="newPost.url" class="form-control" id="postURL" ng-disabled="!currentUser">
+
   </div>
-  <button type="submit" class="btn btn-primary" ng-disabled="!currentUser || !newPost.title">Submit</button>
+  <button type="submit" class="btn btn-primary" ng-disabled="!currentUser">Submit</button>
 </form>
 
-<div id="post-container" class="col-md-6">
-  <ul>
-    <li ng-repeat="post in posts">
-      {{post.title}}
-    </li>
-  </ul>
-</div>-->
+<pre>form = {{newPost | json}}</pre>
 
-<p ng-show="!currentUser"><a href="/register">Register</a> to post a message!</p>
-
-<div class="row">
-  <div class="col-md-6">
-    <form role="form" ng-submit="createPost(newPost)">
-      <div class="form-group">
-      <label for="postTitle">Your Message</label>
-        <input type="text" ng-model="newPost.title" class="form-control" id="postTitle" ng-disabled="!currentUser">
-      </div>
-      <button type="submit" class="btn btn-primary" ng-disabled="!currentUser || !newPost.title">Submit</button>
-    </form>
-  </div>
-  <div class="col-md-6">
-    <h3>All "Posts"</h3>
-    <ul>
-      <li ng-repeat="post in posts">{{post.title}} <b>by</b> {{post.user.username}}, <span am-time-ago="post.updatedAt"></span> <button type="button" class="btn btn-danger btn-xs" ng-click="destroyPost(post)" ng-show="currentUser.id === message.user.id"><i class="fa fa-trash-o"></i></button></li>
-    </ul>
-  </div>
-</div>
-
+<h3>All posts</h3>
+<ul>
+  <li ng-repeat="post in posts">
+    <a href="/post/{{post.url_title}}">{{post.lolol}}</a>
+    <b>by</b> {{post.user.username}}, <span am-time-ago="post.updatedAt"></span> 
+    <br><br>
+    {{post.post_content}}
+    <br><br>
+    <button type="button" class="btn btn-danger btn-xs" ng-click="destroyPost(post)" ng-show="currentUser.id === post.user.id"><i class="fa fa-trash-o"></i></button>
+  </li>
+</ul>

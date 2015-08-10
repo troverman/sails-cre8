@@ -2,17 +2,19 @@ angular.module('models.post', ['lodash', 'services', 'sails.io',])
 
 .service('PostModel', function(lodash, utils, $sailsSocket) {
     this.getAll = function() {
-        var url = utils.prepareUrl('message');
+        var url = utils.prepareUrl('post');
         return $sailsSocket.get(url).then(success, error);
     };
 
     this.create = function(newModel) {
-        var url = utils.prepareUrl('message');
+        console.log(newModel);
+        var url = utils.prepareUrl('post');
+        console.log(url);
         return $sailsSocket.post(url, newModel).then(success, error);
     };
 
     this.delete = function(model) {
-        var url = utils.prepareUrl('message/' + model.id);
+        var url = utils.prepareUrl('post/' + model.id);
         return $sailsSocket.delete(url).then(success, error);
     };
 

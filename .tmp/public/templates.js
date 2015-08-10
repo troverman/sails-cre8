@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/index.tpl.html', 'header/index.tpl.html', 'home/index.tpl.html', 'member/index.tpl.html', 'messages/index.tpl.html', 'search/index.tpl.html']);
+angular.module('templates-app', ['about/index.tpl.html', 'header/index.tpl.html', 'home/index.tpl.html', 'member/index.tpl.html', 'messages/index.tpl.html', 'post/index.tpl.html', 'search/index.tpl.html']);
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/index.tpl.html",
@@ -179,7 +179,7 @@ angular.module("member/index.tpl.html", []).run(["$templateCache", function($tem
 angular.module("messages/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("messages/index.tpl.html",
     "<h2>Messages</h2>\n" +
-    "\n" +
+    "{{currentUser}}\n" +
     "<p ng-show=\"!currentUser\"><a href=\"/register\">Register</a> to post a message!</p>\n" +
     "\n" +
     "<div class=\"row\">\n" +
@@ -188,6 +188,8 @@ angular.module("messages/index.tpl.html", []).run(["$templateCache", function($t
     "			<div class=\"form-group\">\n" +
     "			<label for=\"messageTitle\">Your Message</label>\n" +
     "				<input type=\"text\" ng-model=\"newMessage.title\" class=\"form-control\" id=\"messageTitle\" ng-disabled=\"!currentUser\">\n" +
+    "				<input type=\"text\" ng-model=\"newMessage.lol\" class=\"form-control\" id=\"messageTitle\" ng-disabled=\"!currentUser\">\n" +
+    "\n" +
     "			</div>\n" +
     "			<button type=\"submit\" class=\"btn btn-primary\" ng-disabled=\"!currentUser || !newMessage.title\">Submit</button>\n" +
     "		</form>\n" +
@@ -195,10 +197,46 @@ angular.module("messages/index.tpl.html", []).run(["$templateCache", function($t
     "	<div class=\"col-md-6\">\n" +
     "		<h3>All Messages</h3>\n" +
     "		<ul>\n" +
-    "			<li ng-repeat=\"message in messages\">{{message.title}} <b>by</b> {{message.user.username}}, <span am-time-ago=\"message.updatedAt\"></span> <button type=\"button\" class=\"btn btn-danger btn-xs\" ng-click=\"destroyMessage(message)\" ng-show=\"currentUser.id === message.user.id\"><i class=\"fa fa-trash-o\"></i></button></li>\n" +
+    "\n" +
+    "			<li ng-repeat=\"message in messages\">{{message.title}} {{message.lol}}<b>by</b> {{message.user.username}}, <span am-time-ago=\"message.updatedAt\"></span> <button type=\"button\" class=\"btn btn-danger btn-xs\" ng-click=\"destroyMessage(message)\" ng-show=\"currentUser.id === message.user.id\"><i class=\"fa fa-trash-o\"></i></button></li>\n" +
+    "\n" +
     "		</ul>\n" +
     "	</div>\n" +
     "</div>");
+}]);
+
+angular.module("post/index.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("post/index.tpl.html",
+    "<h3>new post</h3>\n" +
+    "\n" +
+    "<form role=\"form\" ng-submit=\"createPost(newPost)\">\n" +
+    "  <div class=\"form-group\">\n" +
+    "\n" +
+    "    <label for=\"postTitle\">Post Title</label>\n" +
+    "    <input type=\"text\" ng-model=\"newPost.lolol\" class=\"form-control\" id=\"postTitle\" ng-disabled=\"!currentUser\">\n" +
+    "    <label for=\"postTitle\">Post Content</label>\n" +
+    "    <input type=\"text\" ng-model=\"newPost.post_content\" class=\"form-control\" id=\"postContent\" ng-disabled=\"!currentUser\">\n" +
+    "    <label for=\"postTitle\">Post URL</label>\n" +
+    "    <input type=\"text\" ng-model=\"newPost.url\" class=\"form-control\" id=\"postURL\" ng-disabled=\"!currentUser\">\n" +
+    "\n" +
+    "  </div>\n" +
+    "  <button type=\"submit\" class=\"btn btn-primary\" ng-disabled=\"!currentUser\">Submit</button>\n" +
+    "</form>\n" +
+    "\n" +
+    "<pre>form = {{newPost | json}}</pre>\n" +
+    "\n" +
+    "<h3>All posts</h3>\n" +
+    "<ul>\n" +
+    "  <li ng-repeat=\"post in posts\">\n" +
+    "    <a href=\"/post/{{post.url_title}}\">{{post.lolol}}</a>\n" +
+    "    <b>by</b> {{post.user.username}}, <span am-time-ago=\"post.updatedAt\"></span> \n" +
+    "    <br><br>\n" +
+    "    {{post.post_content}}\n" +
+    "    <br><br>\n" +
+    "    <button type=\"button\" class=\"btn btn-danger btn-xs\" ng-click=\"destroyPost(post)\" ng-show=\"currentUser.id === post.user.id\"><i class=\"fa fa-trash-o\"></i></button>\n" +
+    "  </li>\n" +
+    "</ul>\n" +
+    "");
 }]);
 
 angular.module("search/index.tpl.html", []).run(["$templateCache", function($templateCache) {

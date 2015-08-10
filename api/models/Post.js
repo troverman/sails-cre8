@@ -8,40 +8,33 @@
 module.exports = {
 
 	attributes: {
-        title: {
-            type: 'string',
-            required: true,
-            unique: true
+        lolol: {
+            type: 'string'
         },
         post_content: {
-            type: 'string',
-            required: true
-        },
-        other: {
             type: 'string'
         },
         url_title: {
-            type: 'string',
-            required: true,
-            unique: true
+            type: 'string'
         },
         user: {
-            model: 'user',
-            required: true
+            model: 'user'
         }
     },
 
-    afterCreate: function (message, next) {
+    afterCreate: function (post, next) {
         // set message.user = to appropriate user model
-        User.getOne(message.user)
+        User.getOne(post.user)
         .spread(function(user) {
-            message.user = user;
-            next(null, message);
+            post.user = user;
+            next(null, post);
         });
     },
 
     getAll: function() {
         return Post.find()
+        .sort({createdAt: 'desc'})
+        .populate('user')
         .then(function (models) {
             return [models];
         });
@@ -49,6 +42,7 @@ module.exports = {
 
     getOne: function(id) {
         return Post.findOne(id)
+        .populate('user')
         .then(function (model) {
             return [model];
         });
